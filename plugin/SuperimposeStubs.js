@@ -1,19 +1,8 @@
-let prototype;
-
-try {
-  const webpack = require('webpack');
-  prototype = webpack.NormalModuleReplacementPlugin.prototype;
-} catch (e) {
-  module.exports = () => {
-    throw new Error('SuperimposeStubs depends on Webpack and NormalModuleReplacementPlugin and they could not be found.');
-  };
-}
-
 function SuperimposeStubs() {
   const jsExtensions = /(\.jsx?)$/;
 
   this.resourceRegExp = jsExtensions;
-  this.newResource = function newResource(hit) {
+  this.newResource = function(hit) {
     if (!hit.userRequest) {
       return;
     }
@@ -34,7 +23,11 @@ function SuperimposeStubs() {
   };
 }
 
-if (prototype) {
-  SuperimposeStubs.prototype = prototype;
-  module.exports = SuperimposeStubs;
-}
+export default SuperimposeStubs;
+
+SuperimposeStubs.prototype.apply = function(compiler) {
+  const webpack = require('webpack');
+  const fn = webpack.NormalModuleReplacementPlugin.prototype.apply;
+
+  return fn.apply(this, [compiler]);
+};

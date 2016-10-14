@@ -1,5 +1,9 @@
 # ChangeLog
 
+### v1.0.4
+
+ * move Webpack check out of the `SuperimposeStubs` initialization.
+
 ### v1.0.2
 
  * make Webpack not a required dependency anymore.

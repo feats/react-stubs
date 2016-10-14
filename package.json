@@ -1,6 +1,6 @@
 {
   "name": "react-stubs",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Helper methods for stubbing",
   "author": "Victor Duarte (Quadric ApS) <contact@quadric.net>",
   "license": "MIT",
