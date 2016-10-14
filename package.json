@@ -1,6 +1,6 @@
 {
   "name": "react-stubs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Helper methods for stubbing",
   "author": "Victor Duarte (Quadric ApS) <contact@quadric.net>",
   "license": "MIT",
@@ -23,8 +23,7 @@
     "prepublish": "babel -d build/ plugin/"
   },
   "peerDependencies": {
-    "react-komposer": "^1.13.1",
-    "webpack": "^1.13.2"
+    "react-komposer": "^1.13.1"
   },
   "devDependencies": {
     "babel-cli": "6.x.x",
@@ -41,5 +40,8 @@
     "react-addons-test-utils": "^15.3.2",
     "react-dom": "^15.3.2",
     "sinon": "^1.17.6"
+  },
+  "optionalDependencies": {
+    "webpack": "^1.13.2"
   }
 }
