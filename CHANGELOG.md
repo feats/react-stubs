@@ -1,5 +1,9 @@
 # ChangeLog
 
+### v1.1.0
+
+ * remove and give up the `SuperimposeStubs` Webpack plugin.
+
 ### v1.0.4
 
  * move Webpack check out of the `SuperimposeStubs` initialization.
