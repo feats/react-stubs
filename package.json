@@ -1,6 +1,6 @@
 {
   "name": "react-stubs",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Helper methods for stubbing",
   "author": "Victor Duarte (Quadric ApS) <contact@quadric.net>",
   "license": "MIT",
@@ -20,7 +20,7 @@
     "test": "mocha test/*.spec.js --require config/mocha.js --compilers js:babel-core/register",
     "test-watch": "mocha test/*.spec.js --require config/mocha.js --compilers js:babel-core/register --watch",
     "lint-js": "eslint plugin",
-    "prepublish": "babel -d build/ plugin/"
+    "prepublish": "rm -Rf build/ && babel -d build/ plugin/"
   },
   "peerDependencies": {
     "react-komposer": "^1.13.1"
